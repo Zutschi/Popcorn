@@ -9,6 +9,7 @@ public class generateRandom {
         new Random().nextBytes(array);
         String generatedChain = new String(array, Charset.forName("UTF-8"));
 
-        System.out.println(generatedChain);
+        //System.out.println(generatedChain);
+        System.console().printf("UTF-8",generatedChain);
     }
 }

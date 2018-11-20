@@ -1,9 +1,8 @@
 package com.company;
 
-import java.util.Currency;
-
 public class chooseCurrency {
     public static void Currency(String Currency){
+
         america usa = new america();
         switch (Currency) {
             case "Dollar":

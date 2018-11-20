@@ -1,4 +1,5 @@
 package com.company;
+import java.util.Scanner;
 
 
 public class america {
@@ -22,6 +23,7 @@ public class america {
     }
 
     public static void setCountry(String country) {
+
         america.country = country;
     }
 
