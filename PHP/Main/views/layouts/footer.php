@@ -7,12 +7,16 @@
         background-color: #222;
         border-color:#080808;
         color: white;
-        text-align: right; 
+        text-align:right;
+    }
+    .copyright
+    {
+
     }
     </style>
 
     <div class="footer">
-        <p>Copyright by Max Utke 2019</p>
+        <p>Copyright by Max Utke 2019</p>    
     </div>
     <script src="..\Tools\jquery-3.3.1.min.js"></script>
     <script src="..\Tools\bootstrap-3.3.7-dist\js\bootstrap.js"></script> 
