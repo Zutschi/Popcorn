@@ -12,9 +12,9 @@
     </style>
 
     <div class="footer">
-        <p>Copyright by Max Utke 2018</p>
+        <p>Copyright by Max Utke 2019</p>
     </div>
-    <script src="..\..\Tools\jquery-3.3.1.min.js"></script>
-    <script src="..\..\Tools\bootstrap-3.3.7-dist\js\bootstrap.js"></script> 
+    <script src="..\Tools\jquery-3.3.1.min.js"></script>
+    <script src="..\Tools\bootstrap-3.3.7-dist\js\bootstrap.js"></script> 
     </body>
 </html>

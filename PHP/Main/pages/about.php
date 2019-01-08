@@ -1,5 +1,5 @@
 <?php include "./../init.php"; ?>
-<?php include_once "../layouts/Default/header.php"; ?>
+<?php include_once "../views/layouts/header.php"; ?>
 
     <br />
     <br />
@@ -11,6 +11,6 @@
         <p class="lead">Ich bin 22 Jahre alt, komme aus Berlin und von Beruf Entwickler.</p>
       </div>
     </div>
-    <?php include_once "../layouts/Default/footer.php"; ?>
+    <?php include_once "../views/layouts/footer.php"; ?>
   </body>
 </html>

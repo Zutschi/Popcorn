@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="..\..\Tools\bootstrap-3.3.7-dist\css\bootstrap.css">
+    <link rel="stylesheet" href="..\Tools\bootstrap-3.3.7-dist\css\bootstrap.css">
   </head>
   <body>
     <nav class="navbar navbar-inverse navbar-top">
@@ -20,8 +20,8 @@
           </div>
           <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-              <li><a href="..\..\pages\index.php">Home</a></li>
-              <li><a href="..\..\pages\about.php">About</a></li>           
+              <li><a href="..\pages\index.php">Home</a></li>
+              <li><a href="..\pages\about.php">About</a></li>           
             </ul>
           </div><!--/.nav-collapse -->
         </div>
