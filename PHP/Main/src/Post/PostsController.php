@@ -1,24 +1,22 @@
 <?php
 
 namespace App\Post;
- 
 
-class PostsController
+use App\Core\AbstractController;
+use App\Comment\CommentsRepository;
+
+class PostsController extends AbstractController
 {
 
-    public function __construct(PostRepository $postRepository){
-        $this->postRepository = $postRepository;
-        
+    public function __construct(PostRepository $postRepository,CommentsRepository $commentsRepository){
+        $this->postRepository = $postRepository;        
+        $this->commentsRepository = $commentsRepository;
     }
 
-    protected function render($view,$params)
-    {
-        extract($params);
-        include __DIR__ . "/../../views/{$view}.php";
-    }
+    
     public function index()
     {
-        $posts = $this-> postRepository->fetchPosts();
+        $posts = $this-> postRepository->all();
 
         $this->render("post/index",['posts' => $posts]);
         
@@ -27,12 +25,35 @@ class PostsController
 
     public function show()
     {
-        
         $id =$_GET['id'];
-        $post = $this-> postRepository->fetchPost($id);
-        $this->render("post/show",['post' => $post]);
+        if(isset($_POST['content']))
+        {
+            $content = $_POST['content'];
+            $this->commentsRepository->insertForPost($id,$content);
+        }
         
+        $post = $this-> postRepository->find($id);
+        $comments = $this->commentsRepository->allByPost($id);
+        $this->render("post/show",[
+            'post' => $post,
+            'comments' => $comments
+            ]);
     }
+
+    public function about()
+    {
+        $posts = $this-> postRepository->all();
+
+        $this->render("post/about",['posts' => $posts]);
+    }
+
+    public function phpInfo()
+    {
+        $posts = $this-> postRepository->all();
+
+        $this->render("post/phpinfo",['posts' => $posts]);
+    }
+       
 }
 
 ?>

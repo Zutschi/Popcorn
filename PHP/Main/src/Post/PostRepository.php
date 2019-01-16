@@ -1,33 +1,17 @@
 <?php 
 namespace App\Post;
+ use App\Core\AbstractRepository;
 
-use PDO;
-
-class PostRepository 
+class PostRepository extends AbstractRepository
 {
-    private $pdo;
-
-    public function __construct(PDO $pdo)
+    public function getTableName()
     {
-        $this->pdo = $pdo;
+        return "posts";
     }
-
-    function fetchPosts()
+   
+    public function getModelName()
     {
-        $stmt = $this->pdo->query("SELECT * FROM `posts`");
-        $posts = $stmt->fetchAll(PDO::FETCH_CLASS,"App\\Post\\PostModel");
-        return $posts;
-    }
-
-    function fetchPost($id)
-    {
-      
-       $stmt = $this->pdo-> prepare("SELECT * FROM `posts` WHERE id= :id");
-       $stmt->execute(['id' => $id]);
-       $stmt->setFetchMode(PDO::FETCH_CLASS,"App\\Post\\PostModel");
-       $post = $stmt -> fetch(PDO::FETCH_CLASS);   
-       return $post;
-        
+        return "App\\Post\\PostModel";
     }
 }
 

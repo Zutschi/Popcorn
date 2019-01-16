@@ -1,13 +1,13 @@
 <?php
-namespace App\Post;
+namespace App\Comment;
 
 use App\Core\AbstractModel;
 
-class PostModel extends AbstractModel
+class CommentsModel extends AbstractModel
 {
        public $id;
-       public $title;
        public $content;
+       public $post_id;
 }        
 
 

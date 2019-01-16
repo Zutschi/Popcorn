@@ -2,8 +2,8 @@
 <ul>
 <?php foreach ($posts as $post):?>
     <li> 
-        <a href="post.php?id=<?php echo $post->id; ?>"/>
-            <?php echo $post->title;?>            
+        <a href="post?id=<?php echo e($post->id); ?>"/>
+            <?php echo e($post->title);?>            
     </li>
 <?php endforeach?>
 </ul> 

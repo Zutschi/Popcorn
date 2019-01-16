@@ -1,9 +1,12 @@
 <?php
 namespace App\Core;
 
+
+use App\Comment\CommentsRepository;
 use App\Post\PostRepository;
 use App\Post\PostsController;
 use PDO;
+use PDOException;
 
 class Container
 {
@@ -15,7 +18,8 @@ class Container
         $this->builder = [
             'postsController' => function() {
                 return new PostsController(
-                  $this->make('postsRepository')
+                  $this->make('postsRepository'),
+                  $this->make('commentsRepository')
                 );
               },
             'postsRepository' => function()
@@ -24,13 +28,25 @@ class Container
                     $this->make("pdo")
                 );
             },
+            'commentsRepository' => function() {
+                return new CommentsRepository(
+                    $this->make('pdo')
+                );
+            },
             'pdo' => function()
             {
+                try {
                 $pdo = new PDO(
                     'mysql:host=localhost;dbname=blog;charset=utf8',
                     'blog-Admin',
                     'GAeyhes9FNOAlwXI'
-                    ); 
+                    );
+                }
+                catch(PDOException $e)
+                {
+                    echo("Database connection failure!");
+                    die();
+                } 
                     $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);   
                     return $pdo;
             }

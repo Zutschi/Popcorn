@@ -1,4 +1,3 @@
-<?php include "./../init.php"; ?>
 <?php include_once "../views/layouts/header.php"; ?>
 
     <br />
