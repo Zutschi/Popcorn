@@ -1,4 +1,4 @@
-<?php include_once "../views/layouts/header.php"; ?>
+<?php require "../views/layouts/header.php"; ?>
 
     <br />
     <br />
@@ -10,6 +10,6 @@
         <p class="lead">Ich bin 22 Jahre alt, komme aus Berlin und von Beruf Entwickler.</p>
       </div>      
     </div>
-    <?php include_once "../views/layouts/footer.php"; ?>
+    <?php require "../views/layouts/footer.php"; ?>
   </body>
 </html>

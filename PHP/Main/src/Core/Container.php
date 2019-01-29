@@ -5,9 +5,11 @@ namespace App\Core;
 use App\Comment\CommentsRepository;
 use App\Post\PostRepository;
 use App\Post\PostsController;
-use App\User\UserRepository;
+use App\User\UsersRepository;
+use App\User\LoginController;
 use PDO;
 use PDOException;
+
 
 class Container
 {
@@ -17,10 +19,10 @@ class Container
     public function __construct()
     {
         $this->builder = [
-            'userRepository' =>  function ()
+            'loginController' => function()
             {
-                return new UserRepository(
-                    $this-make('usersRepository')
+                return new LoginController(
+                    $this->make("usersRepository")
                 );
             },
             'postsController' => function() {
@@ -33,6 +35,12 @@ class Container
             {
                 return new PostRepository(
                     $this->make("pdo")
+                );
+            },
+            'usersRepository' =>  function ()
+            {
+                return new UsersRepository(
+                    $this->make('pdo')
                 );
             },
             'commentsRepository' => function() {

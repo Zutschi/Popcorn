@@ -1,4 +1,4 @@
-<?php include __DIR__ . "/../layouts/header.php"; ?>
+<?php require __DIR__ . "/../layouts/header.php"; ?>
 <div class="panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title">
@@ -26,4 +26,4 @@
         <br/>
         <br/>
 
-<?php include __DIR__ . "/../layouts/footer.php"; ?> 
+<?php require __DIR__ . "/../layouts/footer.php"; ?> 
