@@ -1,0 +1,14 @@
+Der Sinn dies Projektes ist meine PHP-Kentnisse zu festigen und zu erweitern.
+
+Dabei mache ich ein Tutorial wo ich eien Blog-Webseite erstelle.
+
+Im ersten Schritt erstelle ich die Webseite wie im Tutorial beschrieben.
+
+Der Zweite Schritt ist es, nach der Beendingung des Tutorials, den Blog zu erweitern und das die Oberfläche überarbeitet wird.
+
+Im dritten Schritt will ich auf Grundlage des Blogs eine Anwendung bauen die Aufmehre APIs zugreift, in ersterlinie auf die Youtube APIs.
+
+Es solle mit der Webseite möglich sein das man eine Bessere übersich seiner Abonierten Youtube Chanels bekommt und das man bestimmte Videoreihen (Auf Lets Plays speziell angewendet)
+ als Serie immer angezeigt bekommt.
+
+Der Hintergrund ist dabei das ich mehrere Letsplayer Abboniert habe aber nbicht alles von jedem sehen will. Des weiteren will ich eine art Autolike implementiren wenn das möglich ist. 
