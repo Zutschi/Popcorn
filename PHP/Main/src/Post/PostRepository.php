@@ -13,6 +13,13 @@ class PostRepository extends AbstractRepository
     {
         return "App\\Post\\PostModel";
     }
+
+    public function edit($post_Id,$titel,$content)
+    {
+        $table = $this->getTableName();
+        $stmt = $this->pdo->prepare("UPDATE `$table` SET `title` = '$titel', `content` = '$content' WHERE `posts`.`id` = $post_Id");
+        $stmt->execute();
+    }
 }
 
 ?>

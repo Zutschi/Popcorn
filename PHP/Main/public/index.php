@@ -1,13 +1,16 @@
 <?php
+    session_start();
     require __DIR__ . "/../init.php";
     $pathInfo = $_SERVER['PATH_INFO'];
 
     $routes = [
         '/login' => ['controller' => 'loginController','method' => 'login'],
+        '/logout' => ['controller' => 'loginController','method' => 'logout'],
+        '/dashboard' => ['controller' => 'loginController','method' => 'dashboard'],
         '/index' => ['controller' => 'postsController','method' => 'index'],
         '/post' => ['controller' => 'postsController','method' => 'show'],
-        '/about' => ['controller' => 'postsController','method' => 'about'],
-        '/phpInfo' => ['controller' => 'postsController','method' => 'phpInfo']
+        '/posts-admin' => ['controller' => 'postsAdminController','method' => 'index'],
+        '/post-edit' => ['controller' => 'postsAdminController','method' => 'show']
 
     ];
 

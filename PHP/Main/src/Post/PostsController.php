@@ -39,21 +39,7 @@ class PostsController extends AbstractController
             'comments' => $comments
             ]);
     }
-
-    public function about()
-    {
-        $posts = $this-> postRepository->all();
-
-        $this->render("post/about",['posts' => $posts]);
-    }
-
-    public function phpInfo()
-    {
-        $posts = $this-> postRepository->all();
-
-        $this->render("post/phpinfo",['posts' => $posts]);
-    }
-       
+   
 }
 
 ?>
