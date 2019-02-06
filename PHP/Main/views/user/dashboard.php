@@ -3,8 +3,12 @@
 <br/>
 <br/>
 <ul>
-    <li>
+<li>
+        <a href="posts-admin">Adminestration</a>
+    </li>    
+<li>
         <a href="logout">Logout</a>
     </li>
+
 </ul>
 <?php require __DIR__ . "/../layouts/footer.php"; ?> 

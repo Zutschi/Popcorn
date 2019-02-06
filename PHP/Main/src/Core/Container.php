@@ -41,7 +41,8 @@ class Container
               },
               'postsAdminController' => function() {
                 return new PostsAdminController(
-                  $this->make('postsRepository')
+                    $this->make('loginService'),
+                    $this->make('postsRepository')            
                 );
               },
             'postsRepository' => function()
